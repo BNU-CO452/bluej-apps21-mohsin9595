@@ -1,3 +1,11 @@
-Student derek = new Student("Derek", 12345678);
-Course Computing = new Course("COMP01", "BSc Computing");
-derek.enrol(Computing);
+Course gamesDevelopment = new Course("BT1GDV1", "BSc Games Development");
+gamesDevelopment.print();
+ --------------------------------
+   App211: Course Details
+ --------------------------------
+
+ Course Code: BT1GDV1: BSc Games Development
+
+Student mohsin = new Student("Mohsin Raza", 220211386);
+mohsin.print();
+ Student ID: 220211386 Name: Mohsin Raza
