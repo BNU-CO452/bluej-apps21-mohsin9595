@@ -9,3 +9,11 @@ gamesDevelopment.print();
 Student mohsin = new Student("Mohsin Raza", 220211386);
 mohsin.print();
  Student ID: 220211386 Name: Mohsin Raza
+mohsin.enrol(gamesDevelopment);
+mohsin.printCourse();
+ --------------------------------
+   App211: Course Details
+ --------------------------------
+
+ Course Code: BT1GDV1: BSc Games Development
+
