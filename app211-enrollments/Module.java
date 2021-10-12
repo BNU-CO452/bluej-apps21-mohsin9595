@@ -1,9 +1,10 @@
 
 /**
  * This class represents a BNU module from the course.
- *
+ * Module constructor assigns the code and title for a module
+ * It also initialises the credit value to 0
  * @author Mohsin Raza
- * @version 05/10/2021
+ * @version 12/10/2021
  */
 public class Module
 {
@@ -15,11 +16,11 @@ public class Module
     /**
      * Constructor for objects of class Module
      */
-    public Module(String code,String title, int credit)
+    public Module(String code, String title)
     {
         this.code = code;
         this.title = title;
-        this.credit = credit;        
+        this.credit = 0;        
     }
         /**
      * Return code.
