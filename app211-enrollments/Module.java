@@ -10,22 +10,45 @@ public class Module
     // Variables
     private String code;
     private String title;
+    private int credit;
 
     /**
      * Constructor for objects of class Module
      */
-    public Module()
+    public Module(String code,String title, int credit)
     {
-        
+        this.code = code;
+        this.title = title;
+        this.credit = credit;        
+    }
+        /**
+     * Return code.
+     */
+    public String getCode()
+    {
+        return code;
+    }
+            /**
+     * Return title.
+     */
+    public String getTitle()
+    {
+        return title;    
+    }
+               /**
+     * Return crdit.
+     */
+    public int getCredit()
+    {
+        return credit;
     }
 
    /**
-    * This method will printout the Module code and title
+    * This method will printout the Module which includes
+    * the code, title and credits
     */
     public void print()
-    {
-             printHeading();
-        
+    {            
         System.out.println(" Module Code: " + code + ": " + title);
         System.out.println();
     }
