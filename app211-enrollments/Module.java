@@ -22,22 +22,22 @@ public class Module
         this.title = title;
         this.credit = 0;        
     }
-        /**
-     * Return code.
+    /**
+     * This method returns the code of the module.
      */
     public String getCode()
     {
         return code;
     }
-            /**
-     * Return title.
+    /**
+     * This method returns the title of the module.
      */
     public String getTitle()
     {
         return title;    
     }
-               /**
-     * Return crdit.
+    /**
+     * This method returns the crdit of the module.
      */
     public int getCredit()
     {
