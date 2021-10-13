@@ -1,7 +1,7 @@
 
 /**
- * This class represents a BNU module from the course.
- * Module constructor assigns the code and title for a module
+ * This class Module represents the code, title and cerdit value.
+ * of a given module.
  * It also initialises the credit value to 0
  * @author Mohsin Raza
  * @version 12/10/2021
@@ -14,7 +14,8 @@ public class Module
     private int credit;
 
     /**
-     * Constructor for objects of class Module
+     * Module constructor assigns the code and title for module
+     * It also initialises the credit value to 0
      */
     public Module(String code, String title)
     {
@@ -22,6 +23,7 @@ public class Module
         this.title = title;
         this.credit = 0;        
     }
+    
     /**
      * This method returns the code of the module.
      */
@@ -29,6 +31,7 @@ public class Module
     {
         return code;
     }
+    
     /**
      * This method returns the title of the module.
      */
@@ -36,6 +39,7 @@ public class Module
     {
         return title;    
     }
+    
     /**
      * This method returns the crdit of the module.
      */
@@ -43,24 +47,20 @@ public class Module
     {
         return credit;
     }
+    
+    public void setCredit(int credit)
+    {
+        this.credit = credit;
+    }
 
    /**
-    * This method will printout the Module which includes
+    * This method will printout the details of the Module which includes
     * the code, title and credits
     */
     public void print()
     {            
         System.out.println(" Module Code: " + code + ": " + title);
+        System.out.println("Credit:" + credit);
         System.out.println();
-    }
-    /**
-     * Print out the details of the course to the terminal.
-     */
-    private void printHeading()
-    {
-        System.out.println(" --------------------------------");
-        System.out.println("   App211: Module Details");
-        System.out.println(" --------------------------------");
-        System.out.println();
-    }
+    } 
 }
