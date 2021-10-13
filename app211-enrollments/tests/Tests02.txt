@@ -1,0 +1,18 @@
+Module co452 = new Module("CO452", "Programming Concepts");
+Course gamesDev = new Course("BT1GDV1", "BSc Games Development");
+gamesDev.assignModule(co452);
+gamesDev.print();
+ --------------------------------
+   App211: Course Details
+ --------------------------------
+
+ Course Code: BT1GDV1: BSc Games Development
+ Module Code: CO452: Programming Concepts
+Credit:0
+
+
+co452.setCredit(15);
+co452.print();
+ Module Code: CO452: Programming Concepts
+Credit:15
+
