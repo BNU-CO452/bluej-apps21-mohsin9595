@@ -4,6 +4,7 @@
  * pass the module with a mark of 40+
  *
  * @author Derek Peacock and Nicholas Day
+ * Modified by Mohsin Raza 2021-10-28
  * @version 1.0 17/07/2021
  */
 public class Module
@@ -44,7 +45,7 @@ public class Module
     public void print()
     {
         System.out.println();
-        System.out.print(" " + code + ": " + "\t" + title);
+        System.out.print(" " + code + ": " + title);
     }
     
     /**

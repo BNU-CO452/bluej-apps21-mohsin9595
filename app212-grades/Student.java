@@ -5,6 +5,7 @@ import java.util.*;
  * 
  * @author Michael Kölling and David Barnes
  * Modified by Derek Peacock & Nicholas Day
+ * Modified by Mohsin Raza 2021-10-28
  * @version 2021-08-18
  */
 public class Student
@@ -24,7 +25,7 @@ public class Student
      */
     public Student()
     {
-        this("Derek", 12345678);
+        this("Mohsin Raza", 22021386);
     }
     
     /**
@@ -104,7 +105,7 @@ public class Student
     
     private void printModules()
     {
-
+        course.printModules();
     }
     
     public void printTranscript()
@@ -122,6 +123,7 @@ public class Student
         System.out.println(" Code \t Module \t\tCredit\t Mark \t Grade");
         System.out.println(" ---- \t -------------------- \t ------\t ---- \t -----");
         
+        printModules();
        
         Grades finalGrade = course.calculateGrade(marks);
         
