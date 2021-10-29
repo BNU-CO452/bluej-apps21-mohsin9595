@@ -1,0 +1,31 @@
+Student mohsin = new Student("Mohsin Raza", 22021386);
+Course gamesDev = new Course("BG1GDV1", "Bsc Games Development");
+mohsin.enrol(gamesDev);
+mohsin.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by Mohsin Raza
+ ------------------------------------
+ Student ID: 22021386, Mohsin Raza
+
+ Course BG1GDV1: Bsc Games Development
+
+ CO452: Programming Concepts	  15 credits
+ CO450: Computer Architecture	  15 credits
+ CO461: 3D Modelling	  15 credits
+ CO459: Game Design	  15 credits
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+
+ CO452: Programming Concepts	  15	90	A
+
+ CO450: Computer Architecture	  15	80	A
+
+ CO461: 3D Modelling	  15	70	A
+
+ CO459: Game Design	  15	60	C
+
+
+ Final Course Grade = A
