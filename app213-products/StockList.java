@@ -115,7 +115,7 @@ public class StockList
             }
             else
             {
-                System.out.println("Can't sell " + amount + " " + product.getName() + " beacuse only have " + product.getQuantity());  
+                System.out.println("Can't sell " + amount + " of " + product.getName() + " beacuse only have " + product.getQuantity()+ " in stock");  
             }
         }
         else
