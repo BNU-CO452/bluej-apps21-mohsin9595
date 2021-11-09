@@ -1,0 +1,24 @@
+Product productf1 = new Product(5001, "2001: A Space Odyssey (1968)");
+productf1.print();
+ ID 5001: 2001: A Space Odyssey (1968) stock level: 0
+productf1.decreaseQuantity(3);
+productf1.print();
+ ID 5001: 2001: A Space Odyssey (1968) stock level: 0
+productf1.increaseQuantity(16);
+productf1.print();
+ ID 5001: 2001: A Space Odyssey (1968) stock level: 16
+productf1.decreaseQuantity(4);
+productf1.print();
+ ID 5001: 2001: A Space Odyssey (1968) stock level: 12
+Product productf2 = new Product(5002, "Inception (2010)");
+StockList stockList = new StockList();
+stockList.add(productf1);
+stockList.add(productf2);
+stockList.print();
+
+ Mohsin's Stock List
+ ====================
+
+ ID 5001: 2001: A Space Odyssey (1968) stock level: 12
+ ID 5002: Inception (2010) stock level: 0
+
