@@ -46,6 +46,15 @@ public class StockList
      */
     public void buyProduct(int productID, int amount)
     {
+        Product product = findProduct(productID);
+        if(product != null)
+            {
+                product.increaseQuantity(amount);
+            }
+        else
+            {
+                System.out.println("Couldn't find product");
+            }
     }
     
     /**
@@ -54,9 +63,16 @@ public class StockList
      */
     public Product findProduct(int productID)
     {
+        for (Product product : stock)
+        {
+            if(product.getID() == productID)
+            {
+                return product;
+            }
+        }
+        
         return null;
     }
-    
     
     /**
      * Sell one of the given product.
@@ -65,24 +81,33 @@ public class StockList
      */
     public void sellProduct(int productID)
     {
+        sellProduct(productID, 1);
+    }
+    
+    /**
+     * Sell many of the given product.
+     * Show the before and after status of the product.
+     * @param id The ID of the product being sold.
+     */
+    public void sellProduct(int productID, int amount)
+    {
         Product product = findProduct(productID);
         
         if(product != null) 
         {
             if(product.getQuantity() > 0)
             {
-                product.decreaseQuantity(1);
-                
-                // printout message
+                product.decreaseQuantity(amount);
+                System.out.println("Sold " + amount + " of " + product.getName());
             }
             else
             {
-                // printout message
+                System.out.println("The product" + product.getName() + "is out of stock");  
             }
         }
         else
         {
-            // printout message
+            System.out.println("Couldn't find product");
         }
     }    
 
