@@ -77,7 +77,7 @@ public class StockList
             if(product.getID() == productID)
             {
                 stock.remove(product);
-                System.out.println( product + " removed" );
+                System.out.println( product + " Removed" );
             }
         }
 
@@ -140,9 +140,37 @@ public class StockList
         {
             System.out.println("Couldn't find product");
         }
-    }    
-
+    } 
     
+    /**
+     * To check if stock level of any given product is below 5 or above.
+     * Show the current stock level of the product if above 5 .
+     * @param id The ID of the product being sold.
+     */
+       public void listProductinstock(int productID)
+    {
+        Product product = findProduct(productID);
+        
+        if(product != null) 
+        {
+            if(product.getQuantity() >= 5)
+            {
+                
+                System.out.println("Available stock of " + product.getName() + " is: " + product.getQuantity());
+            }
+            else if(product.getQuantity() < 5)
+            {
+                System.out.println("The product " + product.getName() + ": is low on stock"); 
+            }
+
+        }
+        else
+        {
+            System.out.println("Couldn't find product");
+        }
+    }   
+    
+
     /**
      * Locate a product with the given ID, and return how
      * many of this item are in stock. If the ID does not
