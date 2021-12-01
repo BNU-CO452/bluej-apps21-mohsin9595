@@ -75,7 +75,7 @@ public class StockList
         Product product = findProduct(productID);
         product = product;
         stock.remove(product);
-        System.out.println("this " + product.getName() + " has been removed from the stock");
+        System.out.println("" + product.getName() + " has been removed from the stock");
 
     }
     

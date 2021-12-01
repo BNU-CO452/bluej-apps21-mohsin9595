@@ -87,19 +87,20 @@ public class StockApp
      */
     private void removeProduct()
     {
-        int out = reader.getInt("please enter the ID of the product you wish removed");
+        int out = reader.getInt("please enter the ID of the product to be removed");
         if(stock.findProduct(out) != null)
         {
             stock.removeProduct(out);
-            System.out.println("product has been removed");
+            
+            //System.out.println("product has been removed");
         }
         else if (stock.findProduct(out) == null)
         {
-            System.out.println("There isn't a product with that ID");  
+            System.out.println("Product dosen't exist, Plz try another ID");  
         }
         else 
         {
-            System.out.println("Error, please try again");        
+            System.out.println("Error");        
         }
     
     }
