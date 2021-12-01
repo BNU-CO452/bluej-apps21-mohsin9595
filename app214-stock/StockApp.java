@@ -57,8 +57,16 @@ public class StockApp
         {
             addProduct();
         }
+        else if(choice.equals("remove"))
+        {
+            removeProduct();
+        }
         return false;
     }
+    
+    /**
+     *  For user to add a product
+     */
    
     private void addProduct()
     {
@@ -72,6 +80,26 @@ public class StockApp
         
         stock.add(product);
         stock.print();
+    
+    }
+    
+    private void removeProduct()
+    {
+            int out = reader.getInt("please enter the ID of the product you wish removed");
+            if(stock.findProduct(out) != null)
+            {
+                stock.removeProduct(out);
+                System.out.println("product has been removed");
+            }
+            else if (stock.findProduct(out) == null)
+            {
+                System.out.println("There isn't a product with that ID");  
+            }
+            else 
+            {
+                System.out.println("Error, please try again");
+        
+            }
     
     }
     /**
