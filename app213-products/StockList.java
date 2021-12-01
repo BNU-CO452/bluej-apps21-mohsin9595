@@ -68,19 +68,47 @@ public class StockList
     }
     
     /**
-     * Removes a product from the stock list,
+     * Finds & removes a product from the stock list,
      */
     public void removeProduct(int productID)
     {
-        for(Product product: stock)
-        {
-            if(product.getID() == productID)
-            {
-                stock.remove(product);
-                System.out.println( product + " Removed" );
-            }
-        }
+        Product product = findProduct(productID);
+        product = product;
+        stock.remove(product);
+        System.out.println("this " + product.getName() + " has been removed from the stock");
 
+    }
+    
+    /**
+     * Finds products by name 
+     * if not found return null
+     */
+    public Product findName(String productName)
+    {
+        for(Product product : stock)
+        {
+            if(product.getName() == productName)
+            
+            System.out.println(product);
+        }
+        return null;
+    }
+    
+    /**
+     * Automatically restocks a product  
+     */
+    public Product restockProduct(int productID, int amount)
+    {
+        for(Product product : stock)
+        {
+              if(product.getQuantity() <= 25)
+          
+              product.increaseQuantity(amount);
+          
+              System.out.println(product);
+        }
+     
+       return null;
     }
     
     /**
@@ -168,6 +196,20 @@ public class StockList
         {
             System.out.println("Couldn't find product");
         }
+    }   
+    
+    /**
+     * To check the quantity of each product & 
+     * display the quantity if lower than 25
+     */
+    public Product checkProduct(int productID)
+    {
+        for(Product product : stock) 
+        {
+          if(product.getQuantity() <= 25)
+          System.out.println(product + " stock is getting low");
+        }
+        return null;
     }   
     
 
