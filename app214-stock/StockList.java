@@ -170,47 +170,42 @@ public class StockList
         }
     } 
     
-    /**
-     * To check if stock level of any given product is below 5 or above.
-     * Show the current stock level of the product if above 5 .
-     * @param id The ID of the product being sold.
+     /**
+     * restock all the products that are lower then 5
      */
-       public void listProductinstock(int productID)
+    public void lowStock()
     {
-        Product product = findProduct(productID);
-        
-        if(product != null) 
-        {
-            if(product.getQuantity() >= 5)
+        printHeading();
+        for (Product product : stock) 
             {
-                
-                System.out.println("Available stock of " + product.getName() + " is: " + product.getQuantity());
-            }
-            else if(product.getQuantity() < 5)
-            {
-                System.out.println("The product " + product.getName() + ": is low on stock"); 
-            }
+            if(product.getQuantity() < 5)
 
-        }
-        else
-        {
-            System.out.println("Couldn't find product");
-        }
-    }   
+                product.increaseQuantity(200);
+            }
+            System.out.println("If below 5 Increase stock level by 200");
+        for(Product product : stock)
+            {
+                product.print();
+            }
+    }
     
     /**
      * To check the quantity of each product & 
      * display the quantity if lower than 25
      */
-    public Product checkProduct(int productID)
+    public void productsLowStock()
     {
-        for(Product product : stock) 
+        System.out.println("Products with low stock:");
+        
+        for(Product product : stock)
         {
-          if(product.getQuantity() <= 25)
-          System.out.println(product + " stock is getting low");
+
+            if(product.getQuantity() <= 25)
+            {
+                System.out.println(product.toString());
+            }
         }
-        return null;
-    }   
+    }
     
 
     /**

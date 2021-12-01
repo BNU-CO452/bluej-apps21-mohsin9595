@@ -75,7 +75,11 @@ public class StockApp
         }
         else if(choice.equals("check"))
         {
-            stock.checkProduct(ID);
+            stock.productsLowStock();
+        }
+        else if(choice.equals("restock"))
+        {
+            stock.lowStock();
         }
         return false;
     }
@@ -173,6 +177,10 @@ public class StockApp
         }
     
     }
+    
+   
+    
+    
     /**
      * Print out a menu of operation choices
      */
@@ -185,6 +193,7 @@ public class StockApp
         System.out.println("    Sell:       Sell a product");
         System.out.println("    Search:     Search for a product");
         System.out.println("    Check:      Check stock level");
+        System.out.println("    Restock:    Restock if quantity low");
         System.out.println("    Print:      Print all products");
         System.out.println("    Quit:       Quit the program");
         System.out.println();        
