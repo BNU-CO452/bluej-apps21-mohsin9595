@@ -176,13 +176,16 @@ public class StockList
     public void lowStock()
     {
         printHeading();
+        
         for (Product product : stock) 
             {
-            if(product.getQuantity() < 5)
+                if(product.getQuantity() < 5)
 
                 product.increaseQuantity(200);
             }
+            
             System.out.println("If below 5 Increase stock level by 200");
+            
         for(Product product : stock)
             {
                 product.print();
@@ -195,7 +198,7 @@ public class StockList
      */
     public void productsLowStock()
     {
-        System.out.println("Products with low stock:");
+        System.out.println("Products with low stock - Lower than 25 items:");
         
         for(Product product : stock)
         {

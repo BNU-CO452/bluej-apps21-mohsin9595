@@ -43,6 +43,10 @@ public class StockApp
         }
     }
     
+    /**
+     * Available choices for the user to make
+     */
+    
     private boolean executeChoice(String choice)
     {
         if(choice.equals("quit"))
@@ -150,6 +154,7 @@ public class StockApp
     private void searchProduct()
     {  
         int id = reader.getInt("Enter a Product ID "); 
+        
         Product product = stock.findProduct(id);
         System.out.println("Product found: " + product.getID() + ": " +
         product.getName());
@@ -162,6 +167,7 @@ public class StockApp
     private void removeProduct()
     {
         int out = reader.getInt("please enter the ID of the product to be removed");
+        
         if(stock.findProduct(out) != null)
         {
             stock.removeProduct(out);            
