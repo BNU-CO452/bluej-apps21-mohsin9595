@@ -61,6 +61,10 @@ public class StockApp
         {
             removeProduct();
         }
+        else if(choice.equals("buy"))
+        {
+            buyProduct();
+        }
         return false;
     }
     
@@ -82,6 +86,27 @@ public class StockApp
         stock.print();
     
     }
+    
+    /**
+     *  For user to buy a product
+     */
+   
+    private void buyProduct()
+    {
+        int item = reader.getInt("please enter the ID of the product you want to buy");
+        int quantity = reader.getInt("how many items you want to buy?");
+        
+        if(stock.findProduct(item) != null) 
+            {
+            stock.buyProduct(item, quantity);
+            }
+        else if(stock.findProduct(item) == null)
+            {
+                System.out.println("Your ID dosn't match with the current stock, plz try with another ID");
+            }
+    
+    }
+    
     /**
      *  For user to remove a product
      */
@@ -90,8 +115,7 @@ public class StockApp
         int out = reader.getInt("please enter the ID of the product to be removed");
         if(stock.findProduct(out) != null)
         {
-            stock.removeProduct(out);
-            
+            stock.removeProduct(out);            
             //System.out.println("product has been removed");
         }
         else if (stock.findProduct(out) == null)
@@ -112,6 +136,7 @@ public class StockApp
         System.out.println();
         System.out.println("    Add:        Add a new product");
         System.out.println("    Remove:     Remove an old product");
+        System.out.println("    Buy:        Buy more products");
         System.out.println("    Print:      Print all products");
         System.out.println("    Quit:       Quit the program");
         System.out.println();        
