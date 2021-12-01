@@ -65,6 +65,18 @@ public class StockApp
         {
             buyProduct();
         }
+        else if(choice.equals("sell"))
+        {
+            sellProduct();
+        }
+        else if(choice.equals("search"))
+        {
+            searchProduct();
+        }
+        else if(choice.equals("check"))
+        {
+            stock.checkProduct(ID);
+        }
         return false;
     }
     
@@ -87,14 +99,15 @@ public class StockApp
     
     }
     
+  
     /**
      *  For user to buy a product
      */
    
     private void buyProduct()
     {
-        int item = reader.getInt("please enter the ID of the product you want to buy");
-        int quantity = reader.getInt("how many items you want to buy?");
+        int item = reader.getInt("Please enter the ID of the product you want to buy");
+        int quantity = reader.getInt("Please enter the quantity");
         
         if(stock.findProduct(item) != null) 
             {
@@ -106,6 +119,38 @@ public class StockApp
             }
     
     }
+    
+    /**
+     *  For user to sell a product
+     */
+   
+    private void sellProduct()
+    {
+    int item = reader.getInt("Please enter the ID of the product to sell");
+    int quantity = reader.getInt("Please enter the quantity");
+    
+    if(stock.findProduct(item) != null) 
+    {
+        stock.sellProduct(item, quantity);
+    }
+    else if(stock.findProduct(item) == null)
+    {
+        System.out.println("Your ID dosn't match with the current stock, plz try with another ID");
+    }
+    
+    }
+    
+    /**
+     * let's a user to search product by ID
+     */
+    private void searchProduct()
+    {  
+        int id = reader.getInt("Enter a Product ID "); 
+        Product product = stock.findProduct(id);
+        System.out.println("Product found: " + product.getID() + ": " +
+        product.getName());
+    }
+    
     
     /**
      *  For user to remove a product
@@ -137,6 +182,9 @@ public class StockApp
         System.out.println("    Add:        Add a new product");
         System.out.println("    Remove:     Remove an old product");
         System.out.println("    Buy:        Buy more products");
+        System.out.println("    Sell:       Sell a product");
+        System.out.println("    Search:     Search for a product");
+        System.out.println("    Check:      Check stock level");
         System.out.println("    Print:      Print all products");
         System.out.println("    Quit:       Quit the program");
         System.out.println();        
