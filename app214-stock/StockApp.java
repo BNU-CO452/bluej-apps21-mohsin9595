@@ -100,10 +100,20 @@ public class StockApp
         int id = reader.getInt("Please enter a product id >");
         String name = reader.getString("Please enter the product name >");
         
-        Product product = new Product(id, name);
-        
-        stock.add(product);
-        stock.print();
+        if(stock.findProduct(id) == null)
+            {
+                Product product = new Product(id, name);
+                stock.add(product);
+                System.out.println("Product " + product.getID() + ", " + product.getName() + " has been added ");
+            }
+            else if (stock.findProduct(id) != null)
+            {
+                System.out.println("There is already a product with that ID");
+            }
+            else 
+            {
+                System.out.println("Error, please try again");
+            }
     
     }
     
