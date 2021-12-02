@@ -104,11 +104,11 @@ public class StockApp
             {
                 Product product = new Product(id, name);
                 stock.add(product);
-                System.out.println("Product " + product.getID() + ", " + product.getName() + " has been added ");
+                System.out.println("Product " + product.getID() + ", " + product.getName() + " added ");
             }
             else if (stock.findProduct(id) != null)
             {
-                System.out.println("There is already a product with that ID");
+                System.out.println("A product with this ID already exists, Plz try with another ID");
             }
             else 
             {
